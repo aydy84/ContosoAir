@@ -15,9 +15,9 @@ steps:
       verbose: false
       customCommand: 'install --production'
   - task: ArchiveFiles@2
-    displayName: 'Archive $(Build.SourceDirectory)'
+    displayName: 'Archive $(Build.SourcesDirectory)'
     inputs:
-      rootFolderOrFile: '$(Build.SourceDirectory)'
+      rootFolderOrFile: '$(Build.SourcesDirectory)'
       includeRootFolder: false
   - task: CopyPublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
